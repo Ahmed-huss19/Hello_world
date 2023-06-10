@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <link rel="stylesheet" href="../static/css/main.css" >
+</head>
+<body>
+    <img src="https://speakt.com/wp-content/uploads/2021/10/hello-in-many-languages-1024x576.png" alt="">
+    <br>
+    <form action="greet" method="post">
+        {% for message in get_flashed_messages() %}
+            <p>{{message}}</p>
+        {% endfor %}
+
+        <br>
+        <input type="text" name="name_input">
+        <br>
+        <input type="submit" value="GREET" id="greet">
+        <br>
+    </form>
+</body>
+</html>
